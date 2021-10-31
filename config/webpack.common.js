@@ -62,7 +62,7 @@ module.exports = {
                 options: {},
             },
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.(jpg|png|svg|gif)$/,
                 type: 'asset/resource',
             },
             {
@@ -74,6 +74,16 @@ module.exports = {
                         presets: ['@babel/preset-env'],
                     }
                 },
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
             },
             {
                 // CSS SASS SCSS

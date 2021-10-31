@@ -1,0 +1,67 @@
+.welcome-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20px;
+    img {
+        max-width: 800px;
+    }
+    label {
+        margin-top: 30px;
+        text-align: center;
+        animation: fadeIn ease 5s;
+        input {
+            width: 100%;
+            padding: 5px;
+            border: 3px solid #d96cad;
+            display: block;
+            margin-top: 10px;
+            &.error {
+                animation: 0.1s tremor ease-out infinite;
+                border-color: red;
+            }
+        }
+    }
+    button {
+        margin: 30px;
+        padding: 10px 30px;
+        font-size: 18px;
+        border: 3px solid #00ffd0;
+        background-color: white;
+        cursor: pointer;
+        animation: fadeIn ease 5s;
+        &:hover {
+            background-color: #00ffd0;
+            color: white;
+        }
+    }
+}
+
+@keyframes tremor {
+    0%,
+    25% {
+        left: -1px;
+        transform: translateX(-1%);
+    }
+    50%,
+    100% {
+        left: 1px;
+        transform: translateX(1%);
+    }
+}
+
+@media (max-width: 500px) {
+    .welcome-container label {
+        margin: 30px 40px;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
