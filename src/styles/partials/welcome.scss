@@ -38,30 +38,8 @@
     }
 }
 
-@keyframes tremor {
-    0%,
-    25% {
-        left: -1px;
-        transform: translateX(-1%);
-    }
-    50%,
-    100% {
-        left: 1px;
-        transform: translateX(1%);
-    }
-}
-
 @media (max-width: 500px) {
     .welcome-container label {
         margin: 30px 40px;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 }
