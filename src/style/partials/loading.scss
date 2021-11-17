@@ -1,0 +1,16 @@
+.loading-page {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    color: white;
+    background-color: $dark_bg;
+    span {
+      animation: fade 2s infinite;  
+    }
+    
+}
+

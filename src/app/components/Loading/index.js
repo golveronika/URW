@@ -5,26 +5,21 @@ import useAuth from './../../Authorization/useAuth';
 
 function Loading() {
 
-    let auth = useAuth();
+    const auth = useAuth();
 
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
-      auth.signin("TEST",() => setIsLoaded(true));
-    //   auth.signin(null,() => setIsLoaded(true));
+      // auth.signin("TEST",() => setIsLoaded(true));
+      auth.signin(null,() => setIsLoaded(true));
     }, [])
-
-
+    
     if (!isLoaded) {
-      return <div>Loading...</div>
+      return <div className="loading-page"><span>Loading...</span></div>
     }
 
     if (isLoaded) {
-      return (
-        <div>
-          <Navigate to="/game" />
-        </div>
-      );
+      return (<Navigate to="/game" />);
     }
 
   }
